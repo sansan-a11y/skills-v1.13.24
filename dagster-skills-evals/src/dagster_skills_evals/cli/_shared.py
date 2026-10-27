@@ -67,6 +67,6 @@ def run_setup_scripts(
 ) -> None:
     """Run setup scripts in the given directory."""
     if setup_script:
-        subprocess.run(str(setup_script.resolve()), cwd=tmp_dir, shell=True, check=True)
+        subprocess.run(str(setup_script.resolve()), cwd=tmp_dir, shell=False, check=True)
     if run_specific_script:
-        subprocess.run(str(run_specific_script.resolve()), cwd=tmp_dir, shell=True, check=True)
+        subprocess.run(str(run_specific_script.resolve()), cwd=tmp_dir, shell=False, check=True)
